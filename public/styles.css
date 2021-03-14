@@ -1,0 +1,335 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus{
+  outline: none;
+}
+
+html {
+  font-family: "Karla", sans-serif;
+}
+body {
+  padding: 0 16px;
+  background-color: #000000;
+ }
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto -16px;
+  padding: 16px 32px;
+  color: #fff;
+}
+
+header img {
+  width: 210px;
+  height: 60px;
+}
+
+.presentation-container{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.instructions-container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1245px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-logo{
+  display: block;
+  margin: 0 auto 10px auto;
+  text-align: center;
+  width: 472px;
+  height: 135px;
+}
+
+.tag {
+  background-color: #1a91da;
+  border-radius: 25px;
+  padding: 2px 10px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.headerBtn{
+  padding: 2px 25px;
+}
+
+.Notes {
+  max-width: 1225px;
+  max-height: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+
+
+.note {
+  margin-bottom: 20px;
+  background: #15181c;
+  border-radius: 25px;
+  padding: 20px;
+  width: 500px;
+  color: #fff;
+}
+.note h1 {
+  color: inherit;
+  font-size: 1.5em;
+  display: inline;
+}
+.note p {
+  color: inherit;
+  font-size: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.note .tag {
+  float: right;
+}
+
+.note.instruction{
+  width: 400px;
+  height: 200px;
+  
+}
+.note.instruction h1{
+  font-size: 2em;
+}
+.note.instruction p{
+  font-size: 1.25em;
+}
+
+
+.tag.step{
+  float: left;
+  padding: 10px 10px;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-bottom: 75px;
+}
+
+.search-area {
+  margin: 100px auto 70px auto;
+  display: flex;
+  width: 700px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Title {
+  color: #fff;
+  font-size: 64px;
+  margin-bottom: 20px;
+  flex-basis: 100%;
+  text-align: center;
+}
+.Subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+}
+form {
+  position: relative;
+  background: #15181c;
+  padding: 5px 15px;
+  border-radius: 25px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+form input,
+form textarea {
+  width: 200px;
+  background-color: #15181c;
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+
+form button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+form svg {
+  fill: #fff;
+  vertical-align: middle;
+  margin-right: 10px;
+  transform: scale(0.75);
+}
+
+
+
+select{
+  background-color: #15181c;
+  border: none;
+  border-radius: 25px;
+  color: #FFF;
+  padding: 0px 25px;
+  height: 45px;
+  min-width: 71px;
+  text-align: center;
+  font-size: 1.2em;
+  appearance: none;
+  box-sizing: content-box;
+}
+
+.pagecontroller{
+  display: flex;
+  align-content: center;
+}
+
+.pagecontroller input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.pagecontroller input[type=number]::-webkit-inner-spin-button, 
+.pagecontroller input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+.pagecontroller input[type=number],
+.pagecontroller textarea{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  height: 45px;
+  width: 25px;
+  background-color: #15181c;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  cursor: default;
+}
+
+.pagecontroller textarea{
+  text-align: left;
+  resize: none;
+  line-height: 45px
+}
+
+.pagecontroller button{
+  height: 45px;
+  width: 30px;
+  background-color: #15181c;
+  border: none;
+  fill: #FFF;
+  cursor: pointer;
+  color: white;
+}
+
+.pagecontroller button svg{
+  transform: scale(0.5);
+}
+
+.pagecontroller .btn.first {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.pagecontroller .btn.last {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+.skeleton h1,
+.skeleton p,
+.skeleton .tag{
+  border-radius: 25px;
+  color: transparent;
+  background-image: linear-gradient(-90deg, #333333 0%, #1f1f1f 50%, #333 100%);
+  background-size: 400% 400%;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {background-position: 0% 0%;}
+  100% {background-position: -135% 0%;}
+}
+
+@media  screen and (max-width: 1050px){
+
+  header{
+    padding: 16px 0;
+  }
+
+  .search-area{
+    width: 350px;
+    height: 250px;
+  }
+
+  .main-logo{
+    width: 330px;
+    height: 95px;
+  }
+
+  .Subtitle{
+    font-size: 22px;
+  }
+
+  .Title{
+    font-size: 48px;
+  }
+
+  .Notes{
+    width: 350px;
+    max-width: 350px;
+    min-width: min-content;
+    max-height: none;
+  }
+  .note{
+    width: 300px;
+    box-sizing: content-box;
+  }
+  
+  .note.instruction{
+    height: auto;
+    width: 300px;
+    box-sizing: border-box;
+  }
+
+  .tag.step{
+    margin-right: 10px;
+    margin-bottom: 115px;
+  }
+
+  select{
+    padding: 0px 10px;
+  }
+
+  .instructions-container{
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
+    max-width: 350px;
+    min-width: min-content;
+    max-height: none;
+  }
+}
