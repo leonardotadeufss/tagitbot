@@ -7,7 +7,7 @@ import { BrowserRouter , Route, Switch }  from 'react-router-dom';
 
 export default function App() {
 
-    const url = "http://tagit-test.herokuapp.com/"
+    const { REACT_APP_API_URL } = process.env;
     const [tweets, setTweets] = useState([]);
     const [tags, setTags] = useState([])
     const [actualPage, setActualPage] = useState()
@@ -19,7 +19,7 @@ export default function App() {
         setLoading(true)
         try {
               
-          const res = await fetch(url+user+"/tags");
+          const res = await fetch(REACT_APP_API_URL+user+"/tags");
           if (!res.ok) {
             throw new Error(res.statusText)
           }
@@ -27,7 +27,7 @@ export default function App() {
           setTags(tagData)
           setDisplayError(false)
 
-          const response = await fetch(`${url}${user}?page=${currentPage}`);
+          const response = await fetch(`${REACT_APP_API_URL}${user}?page=${currentPage}`);
           const data = await response.json();
           setTweets(data["docs"]);
           setActualPage(currentPage)
