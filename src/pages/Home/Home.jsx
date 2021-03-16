@@ -21,22 +21,22 @@ function Home() {
                 <Note
                 noteclass = "note instruction"
                 key = {Math.random()}
-                title = "Lorem ipsum"
-                content = "dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+                title = "Tag"
+                content = "Reply the tweet to be saved mentioning the @tagitbot followed by a categorizing keyword."
                 tag = "01"
                 tagclass = "tag step"/>
                 <Note
                 noteclass = "note instruction"
                 key = {Math.random()}
-                title = "Lorem ipsum"
-                content = "dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+                title = "Confirm"
+                content = "Wait the bot reply your mention with the confirmation of success and a link to view your saved tweets"
                 tag = "02"
                 tagclass = "tag step"/>
                 <Note
                 noteclass = "note instruction"
                 key = {Math.random()}
-                title = "Lorem ipsum"
-                content = "dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+                title = "Be happy"
+                content = "Enjoy your saved and organized tweets. It's really that simple."
                 tag = "03"
                 tagclass = "tag step"/>
             </div>
