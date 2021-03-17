@@ -8,7 +8,7 @@ export default function DropFilter (props){
             <select 
                 name={props.name} 
                 defaultValue="DEFAULT"
-                onChange={(e) => props.filter(e)} >
+                onChange={(e) => props.filter(e, 1)} >
                     <option  value="DEFAULT">{props.children}</option>
                     {options.map((opt) => {
                         return(

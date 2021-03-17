@@ -11,10 +11,6 @@ function SearchArea(props) {
    tags = props.tagList.map((tag)=> tag.tag)
  }
  
-  function handlePageRequest(nextPage) {
-    props.loadClick(user, nextPage)
-    
-  }
 
   function handleChange(e){
     const {value} = e.target;
@@ -52,7 +48,7 @@ function SearchArea(props) {
           onChange = {handleChange}
         />
       </form>
-      <PageController pagerequest={handlePageRequest} totalpage = {props.totalpage} actualpage = {props.actualpage}/>
+      <PageController pagerequest={props.changePage} totalpage = {props.totalpage} actualpage = {props.actualpage}/>
       <DropFilter filter={props.filter} name = "Tag" options={tags}>Tag</DropFilter>
     </div>
   );

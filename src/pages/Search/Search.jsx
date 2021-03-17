@@ -17,18 +17,18 @@ function Search(props) {
   }, [tweets])
 
 
-  function FilterByTag(e) {
-    const {value} = e.target;
-    if (value !== "DEFAULT") {
-      const newTweets = tweets.filter( (tweet) =>  {
-        return tweet.tag === value;
-      })
-      setDisplayTweets(newTweets);
-    } else {
-      setDisplayTweets(tweets)
-    }
+  // function FilterByTag(e) {
+  //   const {value} = e.target;
+  //   if (value !== "DEFAULT") {
+  //     const newTweets = tweets.filter( (tweet) =>  {
+  //       return tweet.tag === value;
+  //     })
+  //     setDisplayTweets(newTweets);
+  //   } else {
+  //     setDisplayTweets(tweets)
+  //   }
 
-  }
+  // }
 
 
 
@@ -42,9 +42,10 @@ function Search(props) {
       <SearchArea 
         loadClick = {props.LoadData}
         tagList = {tags}
-        filter = {FilterByTag}
+        filter = {props.filterByTag}
         totalpage = {totalPage}
         actualpage = {actualPage}
+        changePage = {props.changePage}
       />
 
       {props.displayError? <ErrorMessage/> :
