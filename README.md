@@ -2,7 +2,7 @@
 # Tag it BOT ✔
 
 Check it out here⬇️
-![TagIt Bot logo](https://i.imgur.com/GGcxVBt.png)](http://tagitbot.herokuapp.com/)
+![TagIt Bot logo](https://i.imgur.com/mO70OSs.png)](http://tagitbot.herokuapp.com/)
 
 A React client for consuming the Tag it Bot API.
 The project idea was to create a simplificated interface inspired by the Twitter and Google Keep to organize saved tweets by the bot. To display then in a intuitive and visible way, was decided to show tags, tweet's author e the content  in a "note" template, with tag filters e a pagination by date.
